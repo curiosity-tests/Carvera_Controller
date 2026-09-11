@@ -60,7 +60,7 @@ jobs:
         run: sudo apt-get install -y xvfb libgl1 libgles2 libmtdev1
 
       - name: Run quality hooks
-        continue-on-error: true   # racecar: scan/report step, must not fail the build
+        continue-on-error: true   # racecar: scan/report/push step, must not fail the build
         run: poetry run pre-commit run --all-files
 
       - name: Run tests
